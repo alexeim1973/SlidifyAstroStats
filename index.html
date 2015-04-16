@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Astrostatistics and R</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Astrostatistics and R">
+  <meta name="author" content="Alexei Monastyrnyi">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Astrostatistics and R</h1>
+    <h2>A sneak pick into R functions and packages available to Astrostatistics</h2>
+    <p>Alexei Monastyrnyi<br/>Amateur Astronomer</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>The rise of astrostatistics</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Astrophysicists and cosmologists are turning to statisticians to help them analyze an ever-increasing deluge of data.</p></li>
+<li><p>Other fields had already embraced statistics. Statistics is vital to all branches of biology-especially epidemiology, medical research, and public health-and geology.</p></li>
+<li><p>Slowly, though, astronomers began to realize that they might be able to benefit from the expert help of a statistician.</p></li>
+<li><p>One of the recently formed groups is the LSST Informatics and Statistical Science collaboration, organized in preparation for the Large Synoptic Survey Telescope, which, beginning in 2022, will photograph the entire southern sky every three days for 10 years.</p></li>
+</ul>
+
+<p>(Courtesy of SYMMETRY (a joint Fermilab/SLAC publication)
+<a href="http://www.symmetrymagazine.org/article/november-2014/the-rise-of-astrostatistics">http://www.symmetrymagazine.org/article/november-2014/the-rise-of-astrostatistics</a>)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>CRAN packages in R for Astronomy</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The Comprehensive R Analysis Network (CRAN) is a collection of ~5000 extension packages to the public domain R statistical software system.  It has been growing exponentially since 2001.  This page is an attempt to maintain an up-to-date listing of CRAN packages written specifically for astronomy, given in order of most recently added/modified.  </p>
+
+<ul>
+<li>Listed alphabetically</li>
+<li>astro: Astronomy functions, tools and routines </li>
+<li>astrodatR: Astronomical data</li>
+<li>astroFns: Astronomy: time and position functions, misc. utilities</li>
+<li>astrolibR: Astronomy Users Library</li>
+</ul>
+
+<p>[click on URL below for the rest of the list]</p>
+
+<p>(Courtesy of ASAIP - <a href="https://asaip.psu.edu/forums/software-forum/459833927">https://asaip.psu.edu/forums/software-forum/459833927</a>)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Example of using astronomical R code in Slidify</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">X &lt;- readFITS(&quot;s20140112.200.0018.fits&quot;) # read Flexible Image Transport System observation file
+ax1 &lt;- axVec(1, X$axDat); ax2 &lt;- axVec(2, X$axDat); xlab &lt;- X$axDat$ctype[1]
+ylab &lt;- paste(X$axDat$ctype[2], &quot; [&quot;, X$axDat$cunit[2], &quot;]&quot;, sep = &quot;&quot;)
+image(ax1, ax2, X$imDat, xlab = xlab, ylab = ylab)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Recent publications</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Introduction to Astrostatistics and R by Eric Feigelson, Penn State University</li>
+</ol>
+
+<p><a href="http://bccp.berkeley.edu/beach_program/COTB14Feigelson1.pdf">http://bccp.berkeley.edu/beach_program/COTB14Feigelson1.pdf</a></p>
+
+<h2>Literature</h2>
+
+<ol>
+<li><p>Modern Statistical Methods for Astronomy (with R Applications), Feigelson and Babu, CambridgePress, 2012</p></li>
+<li><p>Statistical Methods for Astronomical Data Analysis, Asis KumarChattopadhyay
+TanukaChattopadhyay, Springer Series in Astrostatistics, 2014</p></li>
+<li><p>An Introduction to Statistical Learning with Applications in R, Gareth James et al, Springer 2013</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='The rise of astrostatistics'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='CRAN packages in R for Astronomy'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Example of using astronomical R code in Slidify'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Recent publications'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

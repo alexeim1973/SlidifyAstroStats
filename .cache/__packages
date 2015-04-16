@@ -1,0 +1,11 @@
+base
+datasets
+devtools
+FITSio
+graphics
+grDevices
+lubridate
+methods
+slidify
+stats
+utils
