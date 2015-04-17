@@ -47,13 +47,14 @@
   <article data-timings="">
     <ul>
 <li><p>Astrophysicists and cosmologists are turning to statisticians to help them analyze an ever-increasing deluge of data.</p></li>
-<li><p>Other fields had already embraced statistics. Statistics is vital to all branches of biology-especially epidemiology, medical research, and public health-and geology.</p></li>
+<li><p>Other fields had already embraced statistics. Statistics is vital to all branches of biology-especially epidemiology, medical research and public health - and geology.</p></li>
 <li><p>Slowly, though, astronomers began to realize that they might be able to benefit from the expert help of a statistician.</p></li>
 <li><p>One of the recently formed groups is the LSST Informatics and Statistical Science collaboration, organized in preparation for the Large Synoptic Survey Telescope, which, beginning in 2022, will photograph the entire southern sky every three days for 10 years.</p></li>
 </ul>
 
-<p>(Courtesy of SYMMETRY (a joint Fermilab/SLAC publication)
-<a href="http://www.symmetrymagazine.org/article/november-2014/the-rise-of-astrostatistics">http://www.symmetrymagazine.org/article/november-2014/the-rise-of-astrostatistics</a>)</p>
+<p>Courtesy of SYMMETRY (a joint Fermilab/SLAC publication)</p>
+
+<p><a href="http://www.symmetrymagazine.org/article/november-2014/the-rise-of-astrostatistics">http://www.symmetrymagazine.org/article/november-2014/the-rise-of-astrostatistics</a></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -64,10 +65,11 @@
     <h2>CRAN packages in R for Astronomy</h2>
   </hgroup>
   <article data-timings="">
-    <p>The Comprehensive R Analysis Network (CRAN) is a collection of ~5000 extension packages to the public domain R statistical software system.  It has been growing exponentially since 2001.  This page is an attempt to maintain an up-to-date listing of CRAN packages written specifically for astronomy, given in order of most recently added/modified.  </p>
+    <p>The Comprehensive R Analysis Network (CRAN) is a collection of ~5000 extension packages to the public domain R statistical software system. It has been growing exponentially since 2001.  This page is an attempt to maintain an up-to-date listing of CRAN packages written specifically for astronomy, given in order of most recently added/modified.  </p>
+
+<h3>Listed alphabetically</h3>
 
 <ul>
-<li>Listed alphabetically</li>
 <li>astro: Astronomy functions, tools and routines </li>
 <li>astrodatR: Astronomical data</li>
 <li>astroFns: Astronomy: time and position functions, misc. utilities</li>
@@ -76,7 +78,9 @@
 
 <p>[click on URL below for the rest of the list]</p>
 
-<p>(Courtesy of ASAIP - <a href="https://asaip.psu.edu/forums/software-forum/459833927">https://asaip.psu.edu/forums/software-forum/459833927</a>)</p>
+<p>Courtesy of the Astrostatistics and Astroinformatics Portal</p>
+
+<p><a href="https://asaip.psu.edu/forums/software-forum/459833927">https://asaip.psu.edu/forums/software-forum/459833927</a></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -84,10 +88,11 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Example of using astronomical R code in Slidify</h2>
+    <h2>Example of using astronomical R code in Slidify - FITSio R package</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">X &lt;- readFITS(&quot;s20140112.200.0018.fits&quot;) # read Flexible Image Transport System observation file
+    <pre><code class="r">library(FITSio)
+X &lt;- readFITS(&quot;s20140112.200.0018.fits&quot;) # read FITS observation file
 ax1 &lt;- axVec(1, X$axDat); ax2 &lt;- axVec(2, X$axDat); xlab &lt;- X$axDat$ctype[1]
 ylab &lt;- paste(X$axDat$ctype[2], &quot; [&quot;, X$axDat$cunit[2], &quot;]&quot;, sep = &quot;&quot;)
 image(ax1, ax2, X$imDat, xlab = xlab, ylab = ylab)
@@ -116,7 +121,7 @@ image(ax1, ax2, X$imDat, xlab = xlab, ylab = ylab)
 <li><p>Modern Statistical Methods for Astronomy (with R Applications), Feigelson and Babu, CambridgePress, 2012</p></li>
 <li><p>Statistical Methods for Astronomical Data Analysis, Asis KumarChattopadhyay
 TanukaChattopadhyay, Springer Series in Astrostatistics, 2014</p></li>
-<li><p>An Introduction to Statistical Learning with Applications in R, Gareth James et al, Springer 2013</p></li>
+<li><p>An Introduction to Statistical Learning with Applications in R, Gareth James et al, Springer, 2013</p></li>
 </ol>
 
   </article>
@@ -141,7 +146,7 @@ TanukaChattopadhyay, Springer Series in Astrostatistics, 2014</p></li>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Example of using astronomical R code in Slidify'>
+        data-slide=3 title='Example of using astronomical R code in Slidify - FITSio R package'>
          3
       </a>
     </li>
